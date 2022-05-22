@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node src/app.ts",
-    "dev": "nodemon src/app.ts"
+    "dev": "nodemon src/app.ts",
+    "build": "tsc -p .",
+    "postinstall": "npm run build",
+    "watch-node": "nodemon public/app.js",
+    "watch-ts": "tsc -w"
   },
   "author": "",
   "license": "ISC",
