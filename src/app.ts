@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/', router);
 
-
-app.listen(3000, () => {
-    console.log(`Listening to server at port 3000`)
+var port = process.env.PORT as any || 3000
+app.listen(port, () => {
+    console.log(`Listening to server at port ${port}`)
 })
